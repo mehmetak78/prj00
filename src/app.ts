@@ -132,7 +132,7 @@ abstract class Component<T extends HTMLElement, U extends HTMLElement> {
     hostElement: T;
     element: U;
 
-    constructor(templateId: string, hostElementId: string, insertAtStart: boolean, newElementId?: string) {
+    protected constructor(templateId: string, hostElementId: string, insertAtStart: boolean, newElementId?: string) {
         this.templateElement = document.getElementById(templateId)! as HTMLTemplateElement;
         this.hostElement = document.getElementById(hostElementId)! as T;
 
